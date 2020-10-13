@@ -1,0 +1,24 @@
+{
+  "name": "gmail-clone",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel ./src/index.html"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^9.0.0",
+    "clsx": "^1.1.1",
+    "parcel": "^1.12.4",
+    "postcss": "^8.1.1",
+    "postcss-modules": "^3.2.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "tailwindcss": "^1.9.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.52",
+    "@types/react-dom": "^16.9.8",
+    "typescript": "^4.0.3"
+  }
+}
