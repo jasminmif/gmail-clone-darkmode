@@ -7,7 +7,7 @@ type Props = {
 	className?: string;
 } & React.HTMLAttributes<HTMLButtonElement>;
 
-export default function CircleButton({ padding, children, ...props }: Props) {
+export default function CircleButton({ padding = 2, children, ...props }: Props) {
 	return (
 		<button
 			className={clsx(

@@ -3,3 +3,5 @@ yarn.lock
 .vscode
 .cache
 dist
+yarn.lock
+yarn-error.log

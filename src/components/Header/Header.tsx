@@ -1,6 +1,6 @@
 import React from "react";
 import SearchBar from "./SearchBar";
-import CircleButton from "./utils/CircleButton";
+import CircleButton from "../shared/CircleButton";
 
 type Props = {
 	onSidebarToggle: React.MouseEventHandler;
@@ -10,7 +10,7 @@ export default function Header({ onSidebarToggle }: Props) {
 	return (
 		<div className="w-full h-16 flex items-center text-white border-b border-gray-500">
 			<div className="flex">
-				<div className="w-80 flex pl-2">
+				<div className="w-64 flex pl-2">
 					<CircleButton padding={4} onClick={onSidebarToggle}>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,7 @@ export default function Header({ onSidebarToggle }: Props) {
 
 			<div className="flex justify-between w-full items-center pr-2">
 				<div className="bg-gray-400 rounded-md w-2/3 p-1 flex items-center space-x-2">
-					<div>
+					<div className="pl-1">
 						<CircleButton>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +81,7 @@ export default function Header({ onSidebarToggle }: Props) {
 					</div>
 				</div>
 
-				<div className="space-x-2">
+				<div className="space-x-2 flex items-center">
 					<CircleButton>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -128,6 +128,12 @@ export default function Header({ onSidebarToggle }: Props) {
 						>
 							<path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path>
 						</svg>
+					</CircleButton>
+
+					<CircleButton padding={1}>
+						<div className="h-8 w-8 rounded-full flex justify-center items-center bg-green-400 font-semibold uppercase">
+							J
+						</div>
 					</CircleButton>
 				</div>
 			</div>
