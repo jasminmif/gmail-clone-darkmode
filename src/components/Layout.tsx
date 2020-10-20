@@ -9,7 +9,7 @@ export default function Layout({ children }: Props) {
 	return (
 		<div style={{ height: "calc(100vh - 64px)" }} className="flex">
 			<Sidebar />
-			<div>{children}</div>
+			<div className="w-full">{children}</div>
 		</div>
 	);
 }

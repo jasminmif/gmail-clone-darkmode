@@ -5,9 +5,8 @@ import { useSidebarCollapsedContext } from "./SidebarCollapsedContext";
 import SidebarItem from "./SidebarItem";
 
 export default function Sidebar() {
-	const { isCollapsed, setIsCollapsed, toggleSidebar } = useSidebarCollapsedContext();
+	const { isCollapsed, toggleSidebar } = useSidebarCollapsedContext();
 	const [isMouseIn, setIsMouseIn] = useState(false);
-
 
 	useEffect(() => {
 		if (!isCollapsed) return;
@@ -16,7 +15,7 @@ export default function Sidebar() {
 		if (isMouseIn) {
 			delayTimer = setTimeout(() => {
 				toggleSidebar();
-			}, 800);
+			}, 600);
 		}
 
 		return () => {
