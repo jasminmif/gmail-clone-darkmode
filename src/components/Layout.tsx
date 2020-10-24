@@ -11,7 +11,7 @@ export default function Layout({ children }: Props) {
 			<div className="flex">
 				<Sidebar />
 			</div>
-			<div className="flex-row w-full">{children}</div>
+			<div className="flex-row w-full min-w-0">{children}</div>
 		</div>
 	);
 }

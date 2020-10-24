@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CircleButton from "./shared/CircleButton";
 
 export function EmailRow() {
+	const [onHover, setOnHover] = useState(false);
+
 	return (
-		<div className="flex justify-between items-center px-2 border-b border-gray-500 h-10 text-white hover:shadow-md">
-			<div className="flex items-center">
+		<div
+			className="flex justify-between items-center px-2 border-b border-gray-500 h-10 text-white hover:shadow-md"
+			onMouseEnter={() => setOnHover(true)}
+			onMouseLeave={() => setOnHover(false)}
+		>
+			<div className="flex items-center h-full min-w-0">
 				<div className="flex items-center h-full">
-					<CircleButton>
+					<CircleButton className="text-gray-400 hover:text-gray-200">
 						<svg
 							className="h-5 w-5"
 							viewBox="0 0 24 24"
@@ -25,7 +31,7 @@ export function EmailRow() {
 							/>
 						</svg>
 					</CircleButton>
-					<CircleButton>
+					<CircleButton className="text-gray-400 hover:text-gray-200">
 						<svg
 							className="h-5 w-5"
 							fill="currentColor"
@@ -35,7 +41,7 @@ export function EmailRow() {
 							<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
 						</svg>
 					</CircleButton>
-					<CircleButton>
+					<CircleButton className="text-gray-400 hover:text-gray-200">
 						<svg
 							className="h-5 w-5"
 							viewBox="0 0 24 24"
@@ -51,10 +57,39 @@ export function EmailRow() {
 						</svg>
 					</CircleButton>
 				</div>
-				<div className="w-52">Jasmin Miftari</div>
-				<div className="pr-4 truncate">Request for website development - Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+				<div className="flex-shrink-0 w-52">Jasmin Miftari</div>
+				<div className="pr-4 truncate">
+					Request for website development - Lorem ipsum dolor sit,
+					amet consectetur adipisicing elit. Eaque non nesciunt
+					voluptate inventore est! Aut asperiores dolorem porro
+					pariatur in itaque, dolore ullam. Animi aperiam labore
+					veniam, voluptatibus qui id!
+				</div>
 			</div>
-			<div className="pr-2 text-xs">Oct 22</div>
+			<div className="flex pr-2">
+				{onHover ? (
+					<div className="text-xs whitespace-no-wrap">
+						<CircleButton>
+							<svg
+								className="h-5 w-5"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 20 20"
+								fill="currentColor"
+							>
+								<path
+									fill-rule="evenodd"
+									d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+									clip-rule="evenodd"
+								/>
+							</svg>
+						</CircleButton>
+					</div>
+				) : (
+					<div className="pr-2 text-xs whitespace-no-wrap">
+						Oct 22
+					</div>
+				)}
+			</div>
 		</div>
 	);
 }
@@ -63,5 +98,5 @@ type EmailListProps = {
 	children: React.ReactNode;
 };
 export function EmailList({ children }: EmailListProps) {
-	return <div className="flex-column items-center">{children}</div>;
+	return <div className="flex-row">{children}</div>;
 }
