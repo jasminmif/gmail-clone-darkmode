@@ -1,5 +1,5 @@
 import React from "react";
-import SearchBar from "./SearchBar";
+import SearchBarInput from "./SearchBarInput";
 import CircleButton from "../shared/CircleButton";
 
 type Props = {
@@ -58,7 +58,7 @@ export default function Header({ onSidebarToggle }: Props) {
 						</CircleButton>
 					</div>
 					<div className="flex-1">
-						<SearchBar />
+						<SearchBarInput />
 					</div>
 
 					<div>

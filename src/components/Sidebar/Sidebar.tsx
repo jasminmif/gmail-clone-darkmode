@@ -12,11 +12,11 @@ export default function Sidebar() {
 		if (!isCollapsed) return;
 
 		let delayTimer: any;
-		if (isMouseIn) {
-			delayTimer = setTimeout(() => {
+		delayTimer = setTimeout(() => {
+			if (isMouseIn) {
 				toggleSidebar();
-			}, 600);
-		}
+			}
+		}, 600);
 
 		return () => {
 			toggleSidebar();
@@ -29,7 +29,7 @@ export default function Sidebar() {
 			onMouseEnter={() => setIsMouseIn(true)}
 			onMouseLeave={() => setIsMouseIn(false)}
 			className={clsx(
-				`flex-row transition-all duration-300 space-y-4`,
+				`flex-row transition-all duration-300 space-y-4 pr-2`,
 				isCollapsed ? "w-18" : "w-64"
 			)}
 		>

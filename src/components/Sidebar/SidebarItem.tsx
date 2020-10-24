@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import React from "react";
+import { ACTIVE_COLOR, ACTIVE_TEXT_COLOR } from '../../utils/colors';
 import { useSidebarCollapsedContext } from "./SidebarCollapsedContext";
 
 type Props = {
@@ -13,7 +14,7 @@ const EXPANDED_CSS =
 const COLLAPSED_CSS =
 	"flex justify-center rounded-full inline margin-auto h-8 w-8";
 
-const ACTIVE_CSS = "font-semibold text-blue-900 bg-blue-200";
+const ACTIVE_CSS = `font-semibold text-${ACTIVE_TEXT_COLOR} bg-${ACTIVE_COLOR}`;
 const INACTIVE_CSS = "text-gray-100 hover:bg-gray-400 ";
 
 export default function SidebarItem({ text, active, children }: Props) {
@@ -22,7 +23,7 @@ export default function SidebarItem({ text, active, children }: Props) {
 	return (
 		<div
 			className={clsx(
-				"items-center transition duration-75",
+				"items-center transition duration-75 cursor-pointer",
 				isCollapsed ? COLLAPSED_CSS : EXPANDED_CSS,
 				active ? ACTIVE_CSS : INACTIVE_CSS
 			)}

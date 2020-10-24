@@ -8,8 +8,10 @@ type Props = {
 export default function Layout({ children }: Props) {
 	return (
 		<div style={{ height: "calc(100vh - 64px)" }} className="flex">
-			<Sidebar />
-			<div className="w-full">{children}</div>
+			<div className="flex">
+				<Sidebar />
+			</div>
+			<div className="flex-row w-full">{children}</div>
 		</div>
 	);
 }
