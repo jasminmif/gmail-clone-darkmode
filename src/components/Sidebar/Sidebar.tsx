@@ -1,12 +1,13 @@
 import clsx from "clsx";
+import { observer } from 'mobx-react';
 import React, { useContext, useEffect, useRef, useState } from "react";
+import { useMst } from '../../models';
 import ComposeBtn from "./ComposeBtn";
-import { useSidebarCollapsedContext } from "./SidebarCollapsedContext";
 import SidebarItem from "./SidebarItem";
 
-export default function Sidebar() {
-	const { isCollapsed, toggleSidebar } = useSidebarCollapsedContext();
+function Sidebar() {
 	const [isMouseIn, setIsMouseIn] = useState(false);
+	const { isCollapsed, toggleIsCollapsed } = useMst().sidebar;
 
 	useEffect(() => {
 		if (!isCollapsed) return;
@@ -14,19 +15,19 @@ export default function Sidebar() {
 		let delayTimer: any;
 		delayTimer = setTimeout(() => {
 			if (isMouseIn) {
-				toggleSidebar();
+				toggleIsCollapsed();
 			}
 		}, 600);
 
 		return () => {
-			toggleSidebar();
+			toggleIsCollapsed();
 			clearTimeout(delayTimer);
 		};
 	}, [isMouseIn]);
 
 	return (
 		<div
-			onMouseEnter={() => setIsMouseIn(true)}
+			onMouseEnter={() => isCollapsed && setIsMouseIn(true)}
 			onMouseLeave={() => setIsMouseIn(false)}
 			className={clsx(
 				`flex-row transition-all duration-300 space-y-4 pr-2`,
@@ -91,3 +92,5 @@ export default function Sidebar() {
 		</div>
 	);
 }
+
+export default observer(Sidebar);

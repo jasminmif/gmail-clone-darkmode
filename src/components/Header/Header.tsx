@@ -1,17 +1,22 @@
 import React from "react";
 import SearchBarInput from "./SearchBarInput";
 import CircleButton from "../shared/CircleButton";
+import { useMst } from '../../models';
+import { observer } from 'mobx-react';
 
-type Props = {
-	onSidebarToggle: React.MouseEventHandler;
-};
 
-export default function Header({ onSidebarToggle }: Props) {
+export default function Header() {
+	const { toggleIsCollapsed } = useMst().sidebar;
+
+	function onToggle() {
+		toggleIsCollapsed();
+	}
+
 	return (
 		<div className="w-full h-16 flex items-center text-white border-b border-gray-500">
 			<div className="flex">
 				<div className="w-64 flex pl-2">
-					<CircleButton padding={4} onClick={onSidebarToggle}>
+					<CircleButton padding={4} onClick={onToggle}>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="none"

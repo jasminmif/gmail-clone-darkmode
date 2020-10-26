@@ -1,9 +1,10 @@
 import clsx from 'clsx';
 import React from "react";
-import { useSidebarCollapsedContext } from "./SidebarCollapsedContext";
+import { useMst } from '../../models';
+
 
 export default function ComposeBtn({ ...props }) {
-	const { isCollapsed } = useSidebarCollapsedContext();
+	const { isCollapsed } = useMst().sidebar;
 
 	return (
 		<button

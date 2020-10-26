@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import React from "react";
+import { useMst } from '../../models';
 import { ACTIVE_COLOR, ACTIVE_TEXT_COLOR } from '../../utils/colors';
-import { useSidebarCollapsedContext } from "./SidebarCollapsedContext";
 
 type Props = {
 	text: string;
@@ -18,7 +18,7 @@ const ACTIVE_CSS = `font-semibold text-${ACTIVE_TEXT_COLOR} bg-${ACTIVE_COLOR}`;
 const INACTIVE_CSS = "text-gray-100 hover:bg-gray-400 ";
 
 export default function SidebarItem({ text, active, children }: Props) {
-	const { isCollapsed } = useSidebarCollapsedContext();
+	const { isCollapsed } = useMst().sidebar;
 
 	return (
 		<div
