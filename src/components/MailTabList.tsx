@@ -12,7 +12,7 @@ export function Tab({ active, icon, children }: TabProps) {
 	return (
 		<div
 			className={clsx(
-				`flex-1 flex-col h-full items-center px-2 text-gray-200 justify-center font-semibold transition-colors duration-100 hover:bg-gray-400 cursor-pointer`,
+				`flex-1 flex-col h-full items-center px-2 text-gray-200 hover:text-gray-100 justify-center font-semibold transition-colors duration-100 hover:bg-gray-400 cursor-pointer`,
 				active && `text-${ACTIVE_COLOR}`
 			)}
 		>
