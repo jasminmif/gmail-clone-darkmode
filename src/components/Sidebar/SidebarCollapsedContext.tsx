@@ -1,5 +1,7 @@
 import React, { useContext, createContext, useState, useCallback } from 'react';
 
+// NOTE: This is not used anymore, since i integrated MobX State Tree, but for future uses ill leave this here
+// just in case i want to reuse something similar in the future.
 type SidebarCollapsedType = {
 	isCollapsed: boolean,
 	setIsCollapsed: (active: boolean) => void,
