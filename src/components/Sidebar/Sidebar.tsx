@@ -7,28 +7,38 @@ import SidebarItem from "./SidebarItem";
 
 function Sidebar() {
 	const [isMouseIn, setIsMouseIn] = useState(false);
-	const { isCollapsed, toggleIsCollapsed } = useMst().sidebar;
+	const { isCollapsed, setIsCollapsed, toggleIsCollapsed } = useMst().sidebar;
+	let delayTimer = useRef<number | null>(null);
+
+	const handleIsMouseIn = () => {
+		if (!isCollapsed) return;
+		
+		delayTimer.current = setTimeout(() => {
+			setIsMouseIn(true);
+		}, 600);	
+	}
+
+	const handleMouseOut = () => {
+		setIsMouseIn(false);
+		if (delayTimer.current) {
+			clearTimeout(delayTimer.current);
+		}
+	}
 
 	useEffect(() => {
 		if (!isCollapsed) return;
-
-		let delayTimer: any;
-		delayTimer = setTimeout(() => {
-			if (isMouseIn) {
-				toggleIsCollapsed();
-			}
-		}, 600);
+		
+		setIsCollapsed(false);
 
 		return () => {
 			toggleIsCollapsed();
-			clearTimeout(delayTimer);
 		};
 	}, [isMouseIn]);
 
 	return (
 		<div
-			onMouseEnter={() => isCollapsed && setIsMouseIn(true)}
-			onMouseLeave={() => setIsMouseIn(false)}
+			onMouseEnter={handleIsMouseIn}
+			onMouseLeave={handleMouseOut}
 			className={clsx(
 				`flex-row transition-all duration-300 space-y-4 pr-2`,
 				isCollapsed ? "w-18" : "w-64"
