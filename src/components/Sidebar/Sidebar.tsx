@@ -15,7 +15,7 @@ function Sidebar() {
 		
 		delayTimer.current = setTimeout(() => {
 			setIsMouseIn(true);
-		}, 600);	
+		}, 450);	
 	}
 
 	const handleMouseOut = () => {

@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
-import { EmailList, EmailRow } from './components/EmailList';
+import { EmailList } from './components/Email/EmailList';
+import { EmailRow } from "./components/Email/EmailRow";
 import Header from "./components/Header/Header";
 import Layout from "./components/Layout";
 import MailNavbar from "./components/MailNavbar";
@@ -7,11 +8,9 @@ import { MailTabList, Tab } from "./components/MailTabList";
 import { useSidebarCollapsedContext } from "./components/Sidebar/SidebarCollapsedContext";
 
 export default function Home() {
-	const { toggleSidebar } = useSidebarCollapsedContext();
-
 	return (
 		<div className="bg-gray-600 h-screen">
-			<Header onSidebarToggle={() => toggleSidebar()} />
+			<Header />
 			<Layout>
 				<MailNavbar />
 				<MailTabList>
