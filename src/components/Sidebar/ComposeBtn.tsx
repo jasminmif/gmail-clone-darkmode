@@ -1,8 +1,8 @@
 import clsx from "clsx";
-import React from "react";
+import React, { ButtonHTMLAttributes } from "react";
 import { useMst } from "../../models";
 
-export default function ComposeBtn({ ...props }) {
+export default function ComposeBtn({ ...props }: ButtonHTMLAttributes<HTMLButtonElement>) {
 	const { isCollapsed } = useMst().sidebar;
 
 	return (

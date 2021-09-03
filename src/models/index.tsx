@@ -4,6 +4,7 @@ import { RootModel } from "./Root";
 
 export const rootStore = RootModel.create({
 	sidebar: {},
+	composeEmailList: {composeEmailList: []}
 });
 
 export type RootInstance = Instance<typeof RootModel>;

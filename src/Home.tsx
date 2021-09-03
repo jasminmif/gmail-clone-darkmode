@@ -1,17 +1,19 @@
+import { observer } from "mobx-react";
 import React, { useContext, useState } from "react";
-import { EmailList } from './components/Email/EmailList';
+import ComposeEmailContainer from "./components/ComposeEmail/ComposeEmailContainer";
+import { EmailList } from "./components/Email/EmailList";
 import { EmailRow } from "./components/Email/EmailRow";
 import Header from "./components/Header/Header";
 import Layout from "./components/Layout";
 import MailNavbar from "./components/MailNavbar";
 import { MailTabList, Tab } from "./components/MailTabList";
-import { useSidebarCollapsedContext } from "./components/Sidebar/SidebarCollapsedContext";
 
 export default function Home() {
 	return (
 		<div className="bg-gray-600 h-screen">
 			<Header />
 			<Layout>
+				<ComposeEmailContainer/>
 				<MailNavbar />
 				<MailTabList>
 					<Tab
@@ -103,4 +105,4 @@ export default function Home() {
 			</Layout>
 		</div>
 	);
-}
+};

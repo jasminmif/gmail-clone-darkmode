@@ -8,6 +8,7 @@ import SidebarItem from "./SidebarItem";
 function Sidebar() {
 	const [isMouseIn, setIsMouseIn] = useState(false);
 	const { isCollapsed, setIsCollapsed, toggleIsCollapsed } = useMst().sidebar;
+	const { addComposeEmail } = useMst().composeEmailList;
 	let delayTimer = useRef<number | null>(null);
 
 	const handleIsMouseIn = () => {
@@ -35,6 +36,15 @@ function Sidebar() {
 		};
 	}, [isMouseIn]);
 
+	const composeNewEmail = () => {
+		addComposeEmail({
+			index: 0,
+			recipients: '',
+			subject: '',
+			content: '', 
+		});
+	}
+
 	return (
 		<div
 			onMouseEnter={handleIsMouseIn}
@@ -45,7 +55,7 @@ function Sidebar() {
 			)}
 		>
 			<div className="flex px-2 mt-4 h-14">
-				<ComposeBtn />
+				<ComposeBtn onClick={composeNewEmail}/>
 			</div>
 
 			<div className="flex-column">
