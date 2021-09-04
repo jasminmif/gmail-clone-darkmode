@@ -105,3 +105,267 @@ export function BookmarkIcon() {
 		</svg>
 	);
 }
+
+export function SelectCheckboxIcon() {
+	return (
+		<svg
+			className="h-5 w-5"
+			viewBox="0 0 24 24"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path
+				d="M12 6C12.5523 6 13 6.44772 13 7V11H17C17.5523 11 18 11.4477 18 12C18 12.5523 17.5523 13 17 13H13V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V13H7C6.44772 13 6 12.5523 6 12C6 11.4477 6.44772 11 7 11H11V7C11 6.44772 11.4477 6 12 6Z"
+				fill="currentColor"
+			/>
+			<path
+				fillRule="evenodd"
+				clipRule="evenodd"
+				d="M5 22C3.34315 22 2 20.6569 2 19V5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5ZM4 19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5C4.44772 4 4 4.44772 4 5V19Z"
+				fill="currentColor"
+			/>
+		</svg>
+	);
+}
+
+export function RefreshIcon() {
+	return (
+		<svg
+			className="h-5 w-5"
+			viewBox="0 0 24 24"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path
+				d="M13.1459 11.0499L12.9716 9.05752L15.3462 8.84977C14.4471 7.98322 13.2242 7.4503 11.8769 7.4503C9.11547 7.4503 6.87689 9.68888 6.87689 12.4503C6.87689 15.2117 9.11547 17.4503 11.8769 17.4503C13.6977 17.4503 15.2911 16.4771 16.1654 15.0224L18.1682 15.5231C17.0301 17.8487 14.6405 19.4503 11.8769 19.4503C8.0109 19.4503 4.87689 16.3163 4.87689 12.4503C4.87689 8.58431 8.0109 5.4503 11.8769 5.4503C13.8233 5.4503 15.5842 6.24474 16.853 7.52706L16.6078 4.72412L18.6002 4.5498L19.1231 10.527L13.1459 11.0499Z"
+				fill="currentColor"
+			/>
+		</svg>
+	);
+}
+
+export function ThreeDotsIcon() {
+	return (
+		<svg
+			className="h-5 w-5"
+			xmlns="http://www.w3.org/2000/svg"
+			fill="none"
+			viewBox="0 0 24 24"
+			stroke="currentColor"
+		>
+			<path
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="2"
+				d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+			/>
+		</svg>
+	);
+}
+
+export function SearchIcon() {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			fill="none"
+			viewBox="0 0 24 24"
+			stroke="currentColor"
+			className="h-5"
+		>
+			<path
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="2"
+				d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+			/>
+		</svg>
+	);
+}
+
+export function DownArrowIcon() {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			fill="none"
+			viewBox="0 0 24 24"
+			stroke="currentColor"
+			className="h-5"
+		>
+			<path
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="2"
+				d="M19 9l-7 7-7-7"
+			/>
+		</svg>
+	);
+}
+
+export function QuestionIcon() {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			fill="none"
+			viewBox="0 0 24 24"
+			stroke="currentColor"
+			className="h-6"
+		>
+			<path
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="2"
+				d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+			/>
+		</svg>
+	);
+}
+
+export function SettingsIcon() {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			fill="none"
+			viewBox="0 0 24 24"
+			stroke="currentColor"
+			className="h-6"
+		>
+			<path
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="2"
+				d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+			/>
+			<path
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="2"
+				d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+			/>
+		</svg>
+	);
+}
+
+export function GoogleAppsIcon() {
+	return (
+		<svg
+			className="h-6 fill-current"
+			viewBox="0 0 24 24"
+			stroke="currentColor"
+		>
+			<path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path>
+		</svg>
+	);
+}
+
+export function KeyboardIcon() {
+	return (
+		<svg
+			className="h-5 w-5"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path
+				d="M8 9C8.55228 9 9 8.55228 9 8C9 7.44772 8.55228 7 8 7C7.44772 7 7 7.44772 7 8C7 8.55228 7.44772 9 8 9Z"
+				fill="currentColor"
+			/>
+			<path
+				d="M9 15C8.44772 15 8 15.4477 8 16C8 16.5523 8.44772 17 9 17H15C15.5523 17 16 16.5523 16 16C16 15.4477 15.5523 15 15 15H9Z"
+				fill="currentColor"
+			/>
+			<path
+				d="M9 12C9 12.5523 8.55228 13 8 13C7.44772 13 7 12.5523 7 12C7 11.4477 7.44772 11 8 11C8.55228 11 9 11.4477 9 12Z"
+				fill="currentColor"
+			/>
+			<path
+				d="M12 9C12.5523 9 13 8.55228 13 8C13 7.44772 12.5523 7 12 7C11.4477 7 11 7.44772 11 8C11 8.55228 11.4477 9 12 9Z"
+				fill="currentColor"
+			/>
+			<path
+				d="M13 12C13 12.5523 12.5523 13 12 13C11.4477 13 11 12.5523 11 12C11 11.4477 11.4477 11 12 11C12.5523 11 13 11.4477 13 12Z"
+				fill="currentColor"
+			/>
+			<path
+				d="M16 9C16.5523 9 17 8.55228 17 8C17 7.44772 16.5523 7 16 7C15.4477 7 15 7.44772 15 8C15 8.55228 15.4477 9 16 9Z"
+				fill="currentColor"
+			/>
+			<path
+				d="M17 12C17 12.5523 16.5523 13 16 13C15.4477 13 15 12.5523 15 12C15 11.4477 15.4477 11 16 11C16.5523 11 17 11.4477 17 12Z"
+				fill="currentColor"
+			/>
+			<path
+				fillRule="evenodd"
+				clipRule="evenodd"
+				d="M3 6C3 4.34315 4.34315 3 6 3H18C19.6569 3 21 4.34315 21 6V18C21 19.6569 19.6569 21 18 21H6C4.34315 21 3 19.6569 3 18V6ZM6 5H18C18.5523 5 19 5.44772 19 6V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18V6C5 5.44772 5.44772 5 6 5Z"
+				fill="currentColor"
+			/>
+		</svg>
+	);
+}
+
+export function ArchiveIcon() {
+	return (
+		<svg
+			className="h-5 w-5"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 20 20"
+			fill="currentColor"
+		>
+			<path d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z" />
+			<path d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" />
+		</svg>
+	);
+}
+
+export function TrashcanIcon() {
+	return (
+		<svg
+			className="h-5 w-5"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 20 20"
+			fill="currentColor"
+		>
+			<path
+				fillRule="evenodd"
+				d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+				clipRule="evenodd"
+			/>
+		</svg>
+	);
+}
+
+export function ReadMailIcon() {
+	return (
+		<svg
+			className="h-5 w-5"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 20 20"
+			fill="currentColor"
+		>
+			<path
+				fillRule="evenodd"
+				d="M2.94 6.412A2 2 0 002 8.108V16a2 2 0 002 2h12a2 2 0 002-2V8.108a2 2 0 00-.94-1.696l-6-3.75a2 2 0 00-2.12 0l-6 3.75zm2.615 2.423a1 1 0 10-1.11 1.664l5 3.333a1 1 0 001.11 0l5-3.333a1 1 0 00-1.11-1.664L10 11.798 5.555 8.835z"
+				clipRule="evenodd"
+			/>
+		</svg>
+	);
+}
+
+export function ClockIcon() {
+	return (
+		<svg
+			className="h-5 w-5"
+			fill="currentColor"
+			viewBox="0 0 20 20"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path
+				fillRule="evenodd"
+				d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+				clipRule="evenodd"
+			></path>
+		</svg>
+	);
+}

@@ -7,7 +7,7 @@ interface EmailInputsProps extends InputHTMLAttributes<HTMLInputElement> {
 export default function EmailInputs({ placeholder, ...props }: EmailInputsProps) {
 	return (
 		<input
-			className="outline-none bg-transparent h-8 w-full"
+			className="outline-none bg-transparent h-8 w-full placeholder-gray-500"
 			type="text"
 			placeholder={placeholder}
 			{...props}

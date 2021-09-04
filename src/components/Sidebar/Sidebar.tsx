@@ -1,7 +1,8 @@
 import clsx from "clsx";
-import { observer } from 'mobx-react';
+import { observer } from "mobx-react";
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { useMst } from '../../models';
+import { useMst } from "../../models";
+import Tooltip from "../shared/Tooltip";
 import ComposeBtn from "./ComposeBtn";
 import SidebarItem from "./SidebarItem";
 
@@ -13,22 +14,22 @@ function Sidebar() {
 
 	const handleIsMouseIn = () => {
 		if (!isCollapsed) return;
-		
+
 		delayTimer.current = setTimeout(() => {
 			setIsMouseIn(true);
-		}, 450);	
-	}
+		}, 450);
+	};
 
 	const handleMouseOut = () => {
 		setIsMouseIn(false);
 		if (delayTimer.current) {
 			clearTimeout(delayTimer.current);
 		}
-	}
+	};
 
 	useEffect(() => {
 		if (!isCollapsed) return;
-		
+
 		setIsCollapsed(false);
 
 		return () => {
@@ -39,11 +40,11 @@ function Sidebar() {
 	const composeNewEmail = () => {
 		addComposeEmail({
 			index: 0,
-			recipients: '',
-			subject: '',
-			content: '', 
+			recipients: "",
+			subject: "",
+			content: "",
 		});
-	}
+	};
 
 	return (
 		<div
@@ -55,7 +56,9 @@ function Sidebar() {
 			)}
 		>
 			<div className="flex px-2 mt-4 h-14">
-				<ComposeBtn onClick={composeNewEmail}/>
+				<Tooltip text="Compose an email">
+					<ComposeBtn onClick={composeNewEmail} />
+				</Tooltip>
 			</div>
 
 			<div className="flex-column">
