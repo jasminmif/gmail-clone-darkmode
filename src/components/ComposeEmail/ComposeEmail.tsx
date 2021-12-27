@@ -1,15 +1,15 @@
 import { Instance } from "mobx-state-tree";
 import React, { ReactNode } from "react";
-import { useMst } from "../../models";
+import { useMst } from "../../store-models";
 import EmailInputs from "./EmailInputs";
 import WindowIcon from "./WindowIcon";
 import {
 	ComposeEmail as ComposeEmailModel,
 	WINDOW_STATE,
-} from "../../models/ComposeEmail";
+} from "../../store-models/ComposeEmail";
 import { MinimizeIcon, MaximizeIcon, CloseIcon } from "../../utils/icons";
 import { observer } from "mobx-react";
-import Tooltip from "../shared/Tooltip";
+import Tooltip from "../../shared/Tooltip";
 
 interface ComposeEmailProps {
 	composeEmail: Instance<typeof ComposeEmailModel>;

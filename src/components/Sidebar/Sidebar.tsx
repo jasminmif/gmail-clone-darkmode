@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import { observer } from "mobx-react";
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { useMst } from "../../models";
-import Tooltip from "../shared/Tooltip";
+import { useMst } from "../../store-models";
+import Tooltip from "../../shared/Tooltip";
 import ComposeBtn from "./ComposeBtn";
 import SidebarItem from "./SidebarItem";
 

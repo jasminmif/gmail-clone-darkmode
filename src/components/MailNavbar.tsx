@@ -5,8 +5,8 @@ import {
 	SelectCheckboxIcon,
 	ThreeDotsIcon,
 } from "../utils/icons";
-import CircleButton from "./shared/CircleButton";
-import Tooltip from "./shared/Tooltip";
+import CircleButton from "../shared/CircleButton";
+import Tooltip from "../shared/Tooltip";
 
 export default function MailNavbar() {
 	return (

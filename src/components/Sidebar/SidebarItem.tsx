@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import React from "react";
-import { useMst } from '../../models';
-import { ACTIVE_COLOR, ACTIVE_TEXT_COLOR } from '../../utils/colors';
+import { useMst } from "../../store-models";
+import { ACTIVE_COLOR, ACTIVE_TEXT_COLOR } from "../../utils/colors";
 
 type Props = {
 	text: string;

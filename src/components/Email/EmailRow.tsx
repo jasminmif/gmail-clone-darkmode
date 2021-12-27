@@ -8,8 +8,8 @@ import {
 	StarIcon,
 	TrashcanIcon,
 } from "../../utils/icons";
-import CircleButton from "../shared/CircleButton";
-import Tooltip from "../shared/Tooltip";
+import CircleButton from "../../shared/CircleButton";
+import Tooltip from "../../shared/Tooltip";
 
 export function EmailRow() {
 	const [isHover, setIsHover] = useState(false);
@@ -73,7 +73,7 @@ export function EmailRow() {
 
 						<Tooltip text="Snooze" position="bottom-left">
 							<CircleButton>
-								<ClockIcon/>
+								<ClockIcon />
 							</CircleButton>
 						</Tooltip>
 					</div>

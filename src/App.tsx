@@ -1,12 +1,11 @@
 import React from "react";
-import { SidebarCollapsedContextProvider } from './components/Sidebar/SidebarCollapsedContext';
-import Home from './Home';
-import { Provider } from './models';
+import Home from "./page/Home";
+import { RootStoreProvider } from "./store-models";
 
 export default function App() {
 	return (
-		<Provider>
+		<RootStoreProvider>
 			<Home />
-		</Provider>
+		</RootStoreProvider>
 	);
 }

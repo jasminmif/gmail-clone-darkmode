@@ -1,9 +1,9 @@
 import React from "react";
 import SearchBarInput from "./SearchBarInput";
-import CircleButton from "../shared/CircleButton";
-import { useMst } from "../../models";
+import CircleButton from "../../shared/CircleButton";
+import { useMst } from "../../store-models";
 import { observer } from "mobx-react";
-import Tooltip from "../shared/Tooltip";
+import Tooltip from "../../shared/Tooltip";
 import {
 	DownArrowIcon,
 	GoogleAppsIcon,
